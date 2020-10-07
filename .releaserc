@@ -6,7 +6,7 @@
    "@semantic-release/changelog",
    "@semantic-release/git"
    ],
-  "branches": ["main", "next"],
+  "branches": ["master", "next"],
   "type": "git",
   "url": "git@github.com:almerindo/lambda-function-boillerplate.git"
 }

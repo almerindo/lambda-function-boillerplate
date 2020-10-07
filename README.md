@@ -1,6 +1,6 @@
 # Boilerplate Typescript LambdaFunction
 
-## First edit thee templatee.yaml
+## First edit the template.yaml
 You need edit the `arn:aws:iam::<ID>:role/service-role/<ROLE>` with the correct URI of role.
 
 This function will be triggered by a shedule event `cron(1 3 * * ? *)`.

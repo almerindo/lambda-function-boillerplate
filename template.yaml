@@ -1,0 +1,28 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  LAMBDAS
+  BOILLERPLATE
+
+# More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
+Globals:
+  Function:
+    Timeout: 10
+
+Resources:
+  lambdaFunctionBoillerplate:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      CodeUri: .
+      Handler: src/app.lambdaHandler
+      Runtime: nodejs12.x
+      Description: 'Boillerplate lambda function, by Almerindo Rehem'
+      MemorySize: 128
+      Timeout: 10
+      Role: >-
+        arn:aws:iam::<ID>:role/service-role/<ROLE>
+      Events:
+        Schedule1:
+          Type: Schedule
+          Properties:
+            Schedule: cron(1 3 * * ? *)

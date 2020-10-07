@@ -1,0 +1,37 @@
+{
+  "name": "resmed-lambda-boilerplate",
+  "license": "MIT",
+  "version": "1.0.0",
+  "main": "src/app.ts",
+  "repository": "git@github.com:almerindo/lambda-function-boillerplate.git",
+  "author": "Almerindo Rehem <almerindo.rehem@gmail.com>",
+  "devDependencies": {
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/commit-analyzer": "^8.0.1",
+    "@semantic-release/git": "^9.0.0",
+    "@semantic-release/release-notes-generator": "^9.0.1",
+    "@typescript-eslint/eslint-plugin": "^4.1.1",
+    "eslint": "^7.9.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jest": "^24.0.2",
+    "eslint-plugin-prettier": "^3.1.4",
+    "jest": "^26.4.2",
+    "prettier": "^2.1.2",
+    "rimraf": "^3.0.2",
+    "semantic-release": "^17.1.2",
+    "ts-jest": "^26.4.0",
+    "ts-node-dev": "^1.0.0-pre.62",
+    "typescript": "^4.0.3"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0"
+  },
+  "scripts": {
+    "clean": "rimraf coverage build tmp",
+    "build": "sam build",
+    "test": "jest --runInBand --detectOpenHandles --no-cache ---coverage",
+    "release": "semantic-release --no-ci"
+  }
+}
